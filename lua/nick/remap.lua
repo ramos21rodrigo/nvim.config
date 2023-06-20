@@ -10,12 +10,27 @@ vim.keymap.set("n", "n", "nzzzv")
 
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
-vim.keymap.set("n", "<leader>1", "1<C-w>w")
-vim.keymap.set("n", "<leader>2", "2<C-w>w")
-vim.keymap.set("n", "<leader>3", "3<C-w>w")
-vim.keymap.set("n", "<leader>4", "4<C-w>w")
+vim.keymap.set("n", "<leader>vq", "<C-w>q")
 
-vim.keymap.set("n", "<leader>f", function() 
-		vim.lsp.buf.format()
+-- Split view
+vim.keymap.set("n", "<leader>vu", ":UndotreeShow<CR>1<C-w>w")
+
+vim.keymap.set("n", "<leader>v", "<C-w>")
+vim.keymap.set("n", "<leader>v1", "1<C-w>w")
+vim.keymap.set("n", "<leader>v2", "2<C-w>w")
+vim.keymap.set("n", "<leader>v3", "3<C-w>w")
+vim.keymap.set("n", "<leader>v4", "1<C-w>w")
+
+vim.keymap.set("n", "<leader>vt", ":terminal<CR>i")
+
+-- Terminal
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+
+vim.keymap.set("n", "<leader>f", function()
+	vim.lsp.buf.format()
 end)
 
+vim.keymap.set("n", "<leader>ca", function()
+	vim.lsp.buf.code_action()
+end)
