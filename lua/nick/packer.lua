@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
 
 	use 'mbbill/undotree'
 	use 'tpope/vim-fugitive'
+	use 'christoomey/vim-tmux-navigator'
 
 	use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
 
@@ -50,9 +51,9 @@ return require('packer').startup(function(use)
 			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
 			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' }, -- Required
+			{ 'hrsh7th/nvim-cmp' },  -- Required
 			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
-			{ 'L3MON4D3/LuaSnip' }, -- Required
+			{ 'L3MON4D3/LuaSnip' },  -- Required
 		}
 
 	}
